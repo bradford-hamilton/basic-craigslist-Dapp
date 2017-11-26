@@ -7,14 +7,8 @@ contract ChainList {
   string description;
   uint256 price;
 
-  // constructor -> create a default article
-  function ChainList() {
-    sellArticle(
-      'Default article',
-      'This is an article set by default',
-      1000000000000000000
-    );
-  }
+  // events
+  event sellArticleEvent(address indexed _seller, string _name, uint256 _price);
 
   // sell an article
   function sellArticle(string _name, string _description, uint256 _price)
@@ -23,6 +17,8 @@ contract ChainList {
     name = _name;
     description = _description;
     price = _price;
+
+    sellArticleEvent(seller, name, price);
   }
 
   // get the sellArticle (constant, free to call, cannot change contract)
