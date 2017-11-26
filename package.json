@@ -1,6 +1,6 @@
 {
-  "name": "Chain List",
-  "version": "1.0.0",
+  "name": "chainlist",
+  "version": "0.0.1",
   "description": "Basic Craigslist-like implementation of a marketplace app, using ether for currency.",
   "main": "truffle.js",
   "directories": {
