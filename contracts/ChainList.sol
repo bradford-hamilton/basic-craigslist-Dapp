@@ -16,7 +16,13 @@ contract ChainList {
   uint articleCounter;
 
   // events
-  event sellArticleEvent(uint indexed _id, address indexed _seller, string _name, uint256 _price);
+  event sellArticleEvent(
+    uint indexed _id,
+    address indexed _seller,
+    string _name,
+    uint256 _price
+  );
+
   event buyArticleEvent(
     uint indexed _id,
     address indexed _seller,
