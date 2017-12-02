@@ -12,7 +12,7 @@ contract ChainList {
   }
 
   // state variables
-  mapping(uint => Article) public Articles;
+  mapping(uint => Article) public articles;
   uint articleCounter;
 
   // events
@@ -77,7 +77,7 @@ contract ChainList {
     // copy the articleIds array into the smaller forSale array
     uint[] memory forSale = new uint[](numberOfArticlesForSale);
     for (uint j = 0; j < numberOfArticlesForSale; j++) {
-      forSale[j] = articlesIds[j];
+      forSale[j] = articleIds[j];
     }
 
     return (forSale);
