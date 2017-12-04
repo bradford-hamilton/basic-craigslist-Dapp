@@ -58,7 +58,9 @@ contract ChainList {
   // fetch and return all article IDs available for sale (constant doesn't change state of contract. Free.)
   function getArticlesForSale() public constant returns (uint[]) {
     // we check whether there is at least one article
-    require(articleCounter > 0);
+    if (articleCounter == 0) {
+      return new uint[](0);
+    }
 
     // prepare output arrays
     uint[] memory articleIds = new uint[](articleCounter);
