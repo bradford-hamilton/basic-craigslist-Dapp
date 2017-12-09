@@ -1,2 +1,1 @@
-## ChainList
-#### A basic craigslist-like decentralized application. Buy/Sell using ETH.
+### A basic craigslist-like decentralized application. Buy/Sell using ETH.
